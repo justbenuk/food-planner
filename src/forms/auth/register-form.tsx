@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { regusterUserAction } from "@/actions/auth-actions"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 
 export default function RegisterForm() {
@@ -102,6 +103,7 @@ export default function RegisterForm() {
         </div>
         <Button>Register</Button>
       </form>
+      <p className="text-sm text-center">Already have an account? <Link href={'/login'} className="underline font-semibold">Log In</Link></p>
     </Form >
   )
 }

@@ -1,8 +1,8 @@
 import { auth } from "@/lib/auth"
-import { User2Icon } from "lucide-react"
 import { headers } from "next/headers"
 import { Button } from "../ui/button"
 import Link from "next/link"
+import { UserMenu } from "./user.menu"
 
 export default async function AuthMenu() {
 
@@ -19,7 +19,7 @@ export default async function AuthMenu() {
   }
   return (
     <div>
-      <User2Icon className="size-5" />
+      <UserMenu user={session.user} />
     </div>
   )
 }

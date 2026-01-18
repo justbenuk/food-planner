@@ -2,6 +2,7 @@ import AuthMenu from "../menus/auth-menu";
 import MainNav from "../menus/main-nav";
 import SiteLogo from "../shared/site-logo";
 import { SearchIcon } from "lucide-react";
+import ToggleDarkMode from "../shared/toggle-dark-mode";
 
 export default function Header() {
   return (
@@ -12,6 +13,7 @@ export default function Header() {
       </div>
       <div className="flex flex-row gap-4 items-center">
         <SearchIcon className="size-5" />
+        <ToggleDarkMode />
         <AuthMenu />
       </div>
     </div>

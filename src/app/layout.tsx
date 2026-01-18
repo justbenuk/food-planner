@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body>
-        <ThemeProvider defaultTheme="dark" attribute={'class'} disableTransitionOnChange>
+        <ThemeProvider defaultTheme="system" attribute={'class'} disableTransitionOnChange>
           {children}
           <Toaster />
         </ThemeProvider>
