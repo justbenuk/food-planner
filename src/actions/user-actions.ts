@@ -20,7 +20,8 @@ export async function userCheckActiveSub() {
       }
     })
 
-    if (!hasActiveSubscription) redirect('/choose-plan')
+
+    if (hasActiveSubscription?.status !== 'active') redirect('/choose-plan')
 
     return hasActiveSubscription
 

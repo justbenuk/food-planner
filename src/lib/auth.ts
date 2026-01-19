@@ -36,13 +36,17 @@ export const auth = betterAuth({
         plans: [
           {
             name: 'free',
+            priceId: "price_1SqNCgIsTGigWRnPOxBXCibl",
             limits: {
               recipes: 20
             }
           },
           {
-            name: "premium",
+            name: "pro",
             priceId: "price_1SqMwEIsTGigWRnP1uFTXAR5",
+            limits: {
+              recipes: Infinity
+            },
             freeTrial: {
               days: 14
             }

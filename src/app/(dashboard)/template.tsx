@@ -1,8 +1,13 @@
-import { RootProps } from "@/types";
+import { userIsLoggedIn } from "@/actions/user-actions"
+import { RootProps } from "@/types"
+import Header from "@/components/header/header"
 
-export default function template({ children }: RootProps) {
+export default async function DashboardTemplate({ children }: RootProps) {
+  await userIsLoggedIn()
   return (
-    <div>{children}</div>
+    <>
+      <Header />
+      <main>{children}</main>
+    </>
   )
 }
-
